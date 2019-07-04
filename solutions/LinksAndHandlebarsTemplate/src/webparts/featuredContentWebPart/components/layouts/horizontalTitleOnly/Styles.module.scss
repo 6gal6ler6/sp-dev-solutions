@@ -1,52 +1,65 @@
+.zoom-background-hover {
+    transform: scale(1.05);
+    transition-duration: 0.3s;
+  }
+
 .featured-content {
     display: flex;
+    justify-content: center;
     width: 100%;
     flex-wrap: wrap;
     color: "[theme:primaryText, default: #000000]";
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     & .all-featured-link {
         text-transform: uppercase;
         float: right;
     }
     & .featured-content-item {
-        width: 31%;
+        width: 15vw;
         position: relative;
         padding-right: 0;
         padding-left: 0;
         margin: 0 2% 20px 0;
-        border: 1px solid;
+        border: .01em solid;
         border-color: "[theme: themeSecondary, default: #007cc5]";
-        outline: 1px solid transparent;
-        min-height: 258px;
-        max-height: 258px;
-        &:hover {
-            border: 1px solid;
-            border-color: "[theme: themeSecondary, default: #007cc5]";
-            outline: 1px solid;
+        outline: .01em solid transparent;
+        min-height: 20vh;
+        max-height: 30vh;
+        background-size: cover; background-position: 50% 50%;
+        transition: transform 0.3s ease-in-out;
+        &:hover {   
+            @extend .zoom-background-hover;
             outline-color: "[theme: themeSecondary, default: #007cc5]";
+            color: "[theme: themeSecondary, default: #007cc5]";
         }
         & .featured-content-picture-container {
-            min-height: 200px;
-            max-height: 200px;
+            height: 60%;            
             overflow: hidden;
+            align-items: center;
+            overflow: hidden;
+            text-align: center;
+            vertical-align: middle;
             & img {
-                min-width: 100%;
-                min-height: 200px;
-                max-height: 200px;
+                margin-top: 1%;
+                height: 98%;
+                width: auto;
             }
         }
         & .featured-content-title {
             font-size: 14px;
-            padding: 8px 10px;
+            margin-left: 2%;
+            margin-right: 2%;
             background: "[theme:primaryBackground, default: #FFFFFF]";
             overflow: hidden;
             color: "[theme:primaryText, default: #000000]";
-            font-weight: 600;
-            width: 100%;
+            font-weight: 900;
+            width: 90%;
+            text-align: center;
+            vertical-align: middle;
             position: relative;
             top: 0;
             box-sizing: border-box;
-            max-height: 50px;
+            height: 35%;
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 2;

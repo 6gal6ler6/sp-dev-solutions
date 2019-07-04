@@ -6,6 +6,9 @@ const build = require('@microsoft/sp-build-web');
 build.addSuppression(`Warning - [sass] The local CSS class 'ms-Grid' is not camelCase and will not be type-safe.`);
 const bundleAnalyzer = require('webpack-bundle-analyzer');
 
+const crntConfig = build.getConfig();
+const warningLevel = crntConfig.args["warnoff"];
+
 /********************************************************************************************
  * Adds an alias for handlebars in order to avoid errors while gulping the project
  * https://github.com/wycats/handlebars.js/issues/1174
@@ -45,5 +48,19 @@ build.configureWebpack.mergeConfig({
     return generatedConfiguration;
   }
 });
+
+if (warningLevel) {
+  class CustomSPWebBuildRig extends build.SPWebBuildRig {
+    setupSharedConfig() {
+      build.log("IMPORTANT: Warnings will not fail the build.")
+      build.mergeConfig({
+        shouldWarningsFailBuild: false
+      });
+      super.setupSharedConfig();
+    }
+  }
+
+  build.rig = new CustomSPWebBuildRig();
+}
 
 build.initialize(gulp);
