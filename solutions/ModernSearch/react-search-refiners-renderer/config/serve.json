@@ -4,7 +4,7 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx",
+      "pageUrl": "https://cargillonline.sharepoint.com/sites/BPO/SitePages/lets-get-to-work.aspx",
       "customActions": {
         "6c5daeed-02bf-4f02-806c-7e44a770d71c": {
           "location": "ClientSideExtension.ApplicationCustomizer",
@@ -15,7 +15,7 @@
       }
     },
     "codeRenderer": {
-      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx",
+      "pageUrl": "https://cargillonline.sharepoint.com/sites/BPO/SitePages/lets-get-to-work.aspx",
       "customActions": {
         "6c5daeed-02bf-4f02-806c-7e44a770d71c": {
           "location": "ClientSideExtension.ApplicationCustomizer",
@@ -26,7 +26,7 @@
       }
     },
     "personRenderer": {
-      "pageUrl": "https://tgpuzzlepart.sharepoint.com/sites/nbrem-intra-6/SitePages/Search-test.aspx",
+      "pageUrl": "https://cargillonline.sharepoint.com/sites/BPO/SitePages/lets-get-to-work.aspx",
       "customActions": {
         "819916f3-760a-4e1a-b5cb-46795cdf9fea": {
           "location": "ClientSideExtension.ApplicationCustomizer",
