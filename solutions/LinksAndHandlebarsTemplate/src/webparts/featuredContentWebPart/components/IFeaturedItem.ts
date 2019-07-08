@@ -11,4 +11,4 @@ export interface IFeaturedItem {
     PreviewImageUrl: string;
     CustomImageUrl: string;
     ImageMode: ImageDisplayType;
-}
+}   
